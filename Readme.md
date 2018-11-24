@@ -47,7 +47,7 @@ A factory is a feature that helps building fake data/models.
 > php artisan migrate:fresh
 ```
 
-Use `--seed` to use the seed from DatabaseSeeder.php class
+Use `--seed` to seed database with DatabaseSeeder.php class
 
 ---
 
