@@ -46,7 +46,9 @@ A factory is a feature that helps building fake data/models.
 ```
 > php artisan migrate:fresh
 ```
+
 Use `--seed` to use the seed from DatabaseSeeder.php class
+
 ---
 
 The application is being built during the Fullstack web development with Laravel and Vue.js course.
