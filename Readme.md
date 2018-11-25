@@ -37,6 +37,12 @@ Use `-m` or `--migration` to create a migration in the same command.
 
 A factory is a feature that helps building fake data/models.
 
+#### Create controller:
+```
+> php artisan make:controller <ControllerName>
+```
+Use `--resource` to specify the type of controller and `--model=<ModelName>` to use an existing model as the controller's model.
+
 #### Execute migration:
 ```
 > php artisan migrate
@@ -48,6 +54,11 @@ A factory is a feature that helps building fake data/models.
 ```
 
 Use `--seed` to seed database with DatabaseSeeder.php class
+
+#### Change vendor resources:
+```
+> php artisan vendor:publish --tag=<ComponentName>
+```
 
 ---
 
