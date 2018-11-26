@@ -48,6 +48,13 @@ A factory is a feature that helps building fake data/models.
 
 Use `--resource` to specify the type of controller and `--model=<ModelName>` to use an existing model as the controller's model.
 
+#### Create policy:
+```
+> php artisan make:policy <PolicyName>
+```
+
+Use `--model=<ModelName>` to use an existing model as the policy's model.
+
 #### List routes:
 
 ```
