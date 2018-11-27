@@ -17,6 +17,13 @@
                 </div>
                 <div class="card-body">
                     <p>{!! $question->body_html !!}</p>
+                    <h3>Answers</h3>
+                    @foreach ($question->answers as $answer)
+                    <hr/>
+                    <div>
+                        <p>{!! $answer->body_html !!}</p>
+                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
