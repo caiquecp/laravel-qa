@@ -36,6 +36,10 @@ class Question extends Model
         return $this->created_at->diffForHumans();
     }
 
+    public function getBodyHtmlAttribute() {
+        return \Parsedown::instance()->text($this->body);
+    }
+
     public function getStatusAttribute() {
         if ($this->best_answer_id) {
             return 'answered-accepted';
@@ -44,9 +48,5 @@ class Question extends Model
         } else {
             return 'unanswered';
         }
-    }
-
-    public function getBodyHtmlAttribute() {
-        return \Parsedown::instance()->text($this->body);
     }
 }

@@ -39,4 +39,12 @@ class User extends Authenticatable
     public function getUrlAttribute() {
         return '#';
     }
+
+    public function getAvatarAttribute() {
+        $size = 32;
+
+        return "https://www.gravatar.com/avatar/" 
+            . md5(strtolower(trim($this->email))) 
+            . "?s=" . $size;
+    }
 }
