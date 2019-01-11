@@ -19,5 +19,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// configure the question related routes
 Route::resource('questions', 'QuestionsController')->except('show');
 Route::get('/questions/{slug}', 'QuestionsController@show')->name('questions.show');
+
+// configure the answer related routes
+Route::resource('questions.answers', 'AnswersController')->only(['store', 'edit', 'update', 'destroy']);
