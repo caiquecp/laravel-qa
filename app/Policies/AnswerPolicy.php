@@ -33,4 +33,16 @@ class AnswerPolicy
     {
         return $user->id == $answer->user_id;
     }
+
+    /**
+     * Determine whether the user can accept the best answer.
+     *
+     * @param  \App\User  $user
+     * @param  \App\Answer  $answer
+     * @return mixed
+     */
+    public function acceptBestAnswer(User $user, Answer $answer)
+    {
+        return $user->id == $answer->question->user_id;
+    }
 }

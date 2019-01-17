@@ -25,3 +25,4 @@ Route::get('/questions/{slug}', 'QuestionsController@show')->name('questions.sho
 
 // configure the answer related routes
 Route::resource('questions.answers', 'AnswersController')->only(['store', 'edit', 'update', 'destroy']);
+Route::post('/answers/{answer}/accept', 'AcceptAnswerController@accept')->name('answers.accept');
