@@ -24,6 +24,10 @@ class Question extends Model
         return $this->hasMany(Answer::class);
     }
 
+    public function favorites() {
+        return $this->belongsToMany(User::class, 'favorites');
+    }
+
     public function setTitleAttribute($value) {
         $this->attributes['title'] = $value;
         $this->attributes['slug'] = str_slug($value);
